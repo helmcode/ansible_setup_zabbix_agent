@@ -3,14 +3,8 @@
   apt:
     name: zabbix-agent
     state: latest
-    install_recommends: no
-    update_cache: yes
-    force: true
-
 
 - name: install zabbix-get
   apt:
     name: zabbix-get
     state: latest
-    install_recommends: no
-    update_cache: yes
