@@ -1,4 +1,12 @@
 ---
+-name: Create Zabbix Config.d Directory
+  file:
+    path: /etc/zabbix/zabbix_agentd.conf.d/
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
 - name: Create Zabbix SSL Directory
   file:
     path: "{{ zabbix_ssl_directory }}/keys"
