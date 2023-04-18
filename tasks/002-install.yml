@@ -4,6 +4,7 @@
     name: zabbix-agent
     state: latest
     install_recommends: no
+    update_cache: yes
 
 
 - name: install zabbix-get
@@ -11,3 +12,4 @@
     name: zabbix-get
     state: latest
     install_recommends: no
+    update_cache: yes
