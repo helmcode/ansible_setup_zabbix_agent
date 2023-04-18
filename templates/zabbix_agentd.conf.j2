@@ -10,6 +10,6 @@ HostMetadata={{ host_metadata }}
 Include=/etc/zabbix/zabbix_agentd.d/*.conf
 
 TLSConnect=psk
-TLSAccept=psk
+TLSAccept=unencrypted,psk
 TLSPSKIdentity={{ psk_identity }}
 TLSPSKFile={{ zabbix_ssl_directory }}/zabbix_psk
