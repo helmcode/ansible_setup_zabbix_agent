@@ -1,5 +1,5 @@
 ---
--name: Create Zabbix Config.d Directory
+- name: Create Zabbix Config.d Directory
   file:
     path: /etc/zabbix/zabbix_agentd.conf.d/
     state: directory
