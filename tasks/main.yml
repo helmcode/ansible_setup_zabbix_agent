@@ -1,0 +1,12 @@
+---
+- include_tasks: 001-repository.yml
+  tags:
+    - zabbix_agent_repository
+
+- include_tasks: 002-install.yml
+  tags:
+    - zabbix_agent_install
+
+- include_tasks: 003-configure.yml
+  tags:
+    - zabbix_agent_configure

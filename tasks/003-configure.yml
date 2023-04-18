@@ -1,0 +1,33 @@
+---
+- name: Create Zabbix SSL Directory
+  file:
+    path: "{{ zabbix_ssl_directory }}/keys"
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Copy Zabbix PSK
+  template:
+    src: zabbix_psk.j2
+    dest: "{{ zabbix_ssl_directory }}/keys/zabbix_psk"
+    owner: root
+    group: root
+    mode: 0600
+  notify: restart zabbix-agent
+
+- name: Copy Zabbix Agent Config
+  template:
+    src: zabbix_agentd.conf.j2
+    dest: /etc/zabbix/zabbix_agentd.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart zabbix-agent
+
+
+handlers:
+  - name: restart zabbix-agent
+    service:
+      name: zabbix-agent
+      state: restarted

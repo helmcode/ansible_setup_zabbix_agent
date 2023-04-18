@@ -1,0 +1,9 @@
+---
+host_zabbix_server:
+
+hostname:
+host_metadata:
+
+psk_identity:
+psk_hash:
+zabbix_ssl_directory:

@@ -1,0 +1,15 @@
+PidFile=/run/zabbix/zabbix_agentd.pid
+LogFile=/var/log/zabbix/zabbix_agentd.log
+LogFileSize=0
+
+Server={{ host_zabbix_server }},127.0.0.1
+ServerActive={{ host_zabbix_server }}
+
+Hostname={{ hostname }}
+HostMetadata={{ host_metadata }}
+Include=/etc/zabbix/zabbix_agentd.d/*.conf
+
+TLSConnect=psk
+TLSAccept=psk
+TLSPSKIdentity={{ psk_identity }}
+TLSPSKFile={{ zabbix_ssl_directory }}/zabbix_psk

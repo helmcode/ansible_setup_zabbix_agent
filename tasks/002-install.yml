@@ -1,0 +1,13 @@
+---
+- name: install zabbix-agent
+  apt:
+    name: zabbix-agent
+    state: latest
+    install_recommends: no
+
+
+- name: install zabbix-get
+  apt:
+    name: zabbix-get
+    state: latest
+    install_recommends: no
