@@ -5,6 +5,7 @@
     state: latest
     install_recommends: no
     update_cache: yes
+    force_apt_get: yes
 
 
 - name: install zabbix-get
@@ -13,3 +14,4 @@
     state: latest
     install_recommends: no
     update_cache: yes
+    force_apt_get: yes
