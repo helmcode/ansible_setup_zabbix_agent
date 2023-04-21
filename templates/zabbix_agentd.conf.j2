@@ -9,9 +9,9 @@ Hostname={{ hostname }}
 HostMetadata={{ host_metadata }}
 Include=/etc/zabbix/zabbix_agentd.d/*.conf
 
-{% if active_psk_connection %}
+{% if active_psk_agent_connection %}
 TLSConnect=psk
 TLSAccept=unencrypted,psk
-TLSPSKIdentity={{ psk_identity }}
-TLSPSKFile={{ zabbix_ssl_directory }}/zabbix_psk
+TLSPSKIdentity={{ psk_agent_identity }}
+TLSPSKFile={{ zabbix_agent_ssl_directory }}/zabbix_psk
 {% endif %}

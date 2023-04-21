@@ -4,7 +4,7 @@ host_zabbix_agent_server:
 hostname:
 host_metadata:
 
-active_psk_connection: False
-psk_identity:
-psk_hash:
-zabbix_ssl_directory:
+active_psk_agent_connection: False
+psk_agent_identity:
+psk_agent_hash:
+zabbix_agent_ssl_directory:
