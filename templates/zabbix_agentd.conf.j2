@@ -2,8 +2,8 @@ PidFile=/run/zabbix/zabbix_agentd.pid
 LogFile=/var/log/zabbix/zabbix_agentd.log
 LogFileSize=0
 
-Server={{ host_zabbix_server }},127.0.0.1
-ServerActive={{ host_zabbix_server }}
+Server={{ host_zabbix_agent_server }},127.0.0.1
+ServerActive={{ host_zabbix_agent_server }}
 
 Hostname={{ hostname }}
 HostMetadata={{ host_metadata }}

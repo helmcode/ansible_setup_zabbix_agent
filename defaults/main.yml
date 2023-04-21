@@ -1,5 +1,5 @@
 ---
-host_zabbix_server:
+host_zabbix_agent_server:
 
 hostname:
 host_metadata:
